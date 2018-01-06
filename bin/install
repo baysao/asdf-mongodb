@@ -4,8 +4,7 @@ install_me() {
   local install_type=$1
   local version=$2
   local install_path=$3
-  #source_path=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-${version}.tgz
-  source_path=http://127.0.0.1:2222/mongodb-linux-x86_64-${version}.tgz
+  source_path=http://downloads.mongodb.org/linux/mongodb-linux-x86_64-${version}.tgz
   tmpd=$(mktemp -d); cd $tmpd; 
   echo "curl -L $source_path -o ${version}.tgz"
   curl -L $source_path -o ${version}.tgz
